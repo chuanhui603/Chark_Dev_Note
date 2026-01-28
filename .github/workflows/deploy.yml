@@ -1,0 +1,36 @@
+name: Deploy VitePress to S3
+
+on:
+  push:
+    branches:
+      - main  
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 1. 取得原始碼
+        uses: actions/checkout@v4
+
+      - name: 2. 設定 Node.js 環境
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: 3. 安裝依賴套件
+        run: npm install
+
+      - name: 4. 編譯靜態網頁 (Build)
+        run: npm run docs:build
+
+      - name: 5. 同步檔案到 AWS S3
+        uses: jakejarvis/s3-sync-action@master
+        with:
+          args: --delete  
+        env:
+          AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET_NAME }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: 'ap-east-2'   
+          SOURCE_DIR: 'docs/.vitepress/dist' 
