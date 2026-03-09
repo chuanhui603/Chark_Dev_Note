@@ -9,7 +9,7 @@ export default defineConfig({
     nav: [
       { text: '首頁', link: '/' },
       { text: '筆記心得', link: '/notes/note_Header' },
-      { text: '關於我', link: '/aboutMe/about_me' }
+      { text: '關於我', link: '/about' }
     ],
 
     sidebar: {
@@ -17,15 +17,15 @@ export default defineConfig({
         {
           text: 'AI心得筆記',
           items: [
-            { text: 'CopilotCli使用心得', link: '/notes/ai_docs/copilotCli.md' },
+            { text: 'CopilotCli使用心得', link: '/notes/ai_docs/copilotCli' },
           ]
         },
       ],
-      '/aboutMe/about_me': [
+      '/about': [
         {
           text: 'About Me',
           items: [
-            { text: '關於我', link: '/aboutMe/about_me' }
+            { text: '關於我', link: '/about' }
           ]
         }
       ]
