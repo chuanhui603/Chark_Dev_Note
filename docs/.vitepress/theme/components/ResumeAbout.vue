@@ -48,7 +48,7 @@
             <span class="resume-breadcrumb-sep">›</span>
             <span>關於</span>
           </nav>
-          <h2 class="resume-intro-title">{{ fm.introTitle || '「哈囉，世界！」' }}</h2>
+          <h2 class="resume-intro-title">{{ fm.introTitle }}</h2>
           <div class="resume-intro-body">
             <p v-for="(para, i) in fm.intro" :key="i">{{ para }}</p>
           </div>
