@@ -6,7 +6,7 @@
         </div>
 
         <div class="note-list-items" v-if="articles.length">
-            <a v-for="(article, i) in articles" :key="i" :href="article.url" class="note-list-item">
+            <a v-for="(article, i) in articles" :key="i" :href="withBase(article.url)" class="note-list-item">
                 <div class="note-list-item-left">
                     <div class="note-list-item-date">
                         <span class="note-date-day">{{ getDay(article.date) }}</span>
@@ -36,6 +36,7 @@
 </template>
 
 <script setup>
+import { withBase } from 'vitepress'
 import { data as articles } from '../../../articles.data.mjs'
 
 function getDay(dateStr) {

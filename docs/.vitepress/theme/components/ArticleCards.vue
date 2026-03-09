@@ -6,7 +6,7 @@
         </h2>
 
         <div class="article-cards-grid" v-if="articles.length">
-            <a v-for="(article, i) in articles" :key="i" :href="article.url" class="article-card">
+            <a v-for="(article, i) in articles" :key="i" :href="withBase(article.url)" class="article-card">
                 <!-- Cover placeholder -->
                 <div class="article-card-cover">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"
@@ -50,6 +50,7 @@
 </template>
 
 <script setup>
+import { withBase } from 'vitepress'
 import { data as articles } from '../../../articles.data.mjs'
 
 function formatDate(dateStr) {
