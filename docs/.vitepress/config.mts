@@ -14,7 +14,7 @@ export default defineConfig({
     sidebar: {
       '/notes/note_Header': [
         {
-          text: '技術筆記',
+          text: 'AI心得筆記',
           items: [
             { text: 'CopilotCli使用心得', link: '/notes/ai_docs/copilotCli.md' },
           ]
