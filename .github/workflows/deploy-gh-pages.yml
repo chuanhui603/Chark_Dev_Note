@@ -1,0 +1,40 @@
+name: Deploy VitePress to GitHub Pages Branch
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  deploy-gh-pages:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 1. 取得原始碼
+        uses: actions/checkout@v4
+
+      - name: 2. 設定 Node.js 環境
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: 3. 安裝依賴套件
+        run: npm ci
+
+      - name: 4. 以 GitHub Pages base 編譯
+        env:
+          VITEPRESS_TARGET: github-pages
+        run: npm run docs:build
+
+      - name: 5. 發佈 dist 到 gh-pages branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: docs/.vitepress/dist
+          force_orphan: true

@@ -1,7 +1,10 @@
 import { defineConfig } from 'vitepress'
 
+const isGitHubPages =
+  (globalThis as { process?: { env?: Record<string, string | undefined> } }).process?.env?.VITEPRESS_TARGET === 'github-pages'
 
 export default defineConfig({
+  base: isGitHubPages ? '/Chark_Dev_Note/' : '/',
   title: "Chark筆記",
   description: "一個 C# 工程師的技術筆記。用來分享開發心得。",
   appearance: false,
