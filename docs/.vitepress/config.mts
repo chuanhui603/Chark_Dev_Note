@@ -8,15 +8,15 @@ export default defineConfig({
     nav: [
       { text: '首頁', link: '/' },
       { text: '筆記心得', link: '/markdown-examples' },
-      { text: '關於我', link: '/markdown-examples' }
+      { text: '關於我', link: '/docs/about_me.md' }
     ],
 
     sidebar: [
       {
         text: '技術筆記',
         items: [
-          { text: '技術架構心得', link: '/markdown-examples' },
-          { text: 'Vue學習筆記', link: '/api-examples' }
+          { text: 'AI使用心得', link: '/docs/ai_docs/copilotCli.md' },
+          { text: 'Vue學習筆記', link: '/docs/vue_docs/vue-compositonAPI.md' }
         ]
       }
     ],
