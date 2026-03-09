@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 
 export default defineConfig({
-  title: "Chark_Dev_Note",
+  title: "Chark筆記",
   description: "一個 C# 工程師的技術筆記。用來分享開發心得。",
   appearance: false,
   themeConfig: {

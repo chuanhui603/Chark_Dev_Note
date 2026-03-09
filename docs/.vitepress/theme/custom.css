@@ -135,8 +135,8 @@ body {
 
 .VPHero .name,
 .VPHero .text {
-  max-width: 12ch;
-  font-size: clamp(2.8rem, 6vw, 4.6rem) !important;
+  max-width: none;
+  font-size: clamp(2rem, 4.8vw, 3.8rem);
   line-height: 1.08 !important;
 }
 
@@ -995,4 +995,208 @@ body {
     grid-template-columns: 1fr;
     gap: 16px;
   }
+}
+
+/* ===== Note List - 筆記心得 ===== */
+.notes-index-doc .VPDoc {
+  padding-bottom: 72px;
+}
+
+.note-list-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.note-list-header {
+  margin: 40px 0 60px;
+  text-align: center;
+}
+
+.note-list-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--vp-c-text-1);
+  margin-bottom: 12px;
+}
+
+.note-list-subtitle {
+  font-size: 1.1rem;
+  color: var(--vp-c-text-2);
+}
+
+.note-list-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.note-list-item {
+  display: flex;
+  align-items: center;
+  padding: 24px;
+  background: var(--vp-c-bg-soft);
+  border-radius: 16px;
+  text-decoration: none !important;
+  color: inherit;
+  border: 1px solid var(--vp-c-divider);
+  transition: all 0.3s ease;
+}
+
+.note-list-item:hover {
+  transform: translateX(8px);
+  border-color: var(--vp-c-brand-1);
+  box-shadow: 0 12px 24px rgba(36, 52, 71, 0.06);
+}
+
+.note-list-item-left {
+  flex-shrink: 0;
+  width: 80px;
+  text-align: center;
+  border-right: 1px solid var(--vp-c-divider);
+  padding-right: 20px;
+  margin-right: 24px;
+}
+
+.note-date-day {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--vp-c-text-1);
+  line-height: 1;
+}
+
+.note-date-month {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--vp-c-text-3);
+  margin-top: 4px;
+}
+
+.note-list-item-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.note-list-item-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.note-list-tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: rgba(36, 52, 71, 0.06);
+  color: var(--vp-c-text-2);
+}
+
+.note-list-item-title {
+  margin: 0 0 8px !important;
+  padding: 0 !important;
+  border: none !important;
+  font-size: 1.25rem !important;
+  font-weight: 700;
+  color: var(--vp-c-text-1);
+}
+
+.note-list-item-desc {
+  margin: 0 !important;
+  font-size: 0.95rem;
+  color: var(--vp-c-text-2);
+  line-height: 1.6;
+}
+
+.note-list-item-arrow {
+  color: var(--vp-c-text-3);
+  margin-left: 16px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.note-list-item:hover .note-list-item-arrow {
+  color: var(--vp-c-brand-1);
+  transform: translateX(4px);
+}
+
+@media (max-width: 640px) {
+  .note-list-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .note-list-item-left {
+    width: auto;
+    border-right: none;
+    padding-right: 0;
+    margin-right: 0;
+    margin-bottom: 16px;
+    text-align: left;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+
+  .note-date-day {
+    font-size: 1.4rem;
+  }
+
+  .note-list-item-arrow {
+    display: none;
+  }
+}
+
+/* ===== Article Detail (VitePress content) Optimization ===== */
+/* Makes standard markdown content look less monotonous */
+.vp-doc h1 {
+  font-size: 2.4rem;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+  color: var(--vp-c-text-1);
+}
+
+.vp-doc h2 {
+  font-size: 1.8rem;
+  margin-top: 3rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.5rem;
+  color: var(--vp-c-text-1);
+}
+
+.vp-doc h3 {
+  font-size: 1.4rem;
+  margin-top: 2rem;
+  color: var(--vp-c-text-1);
+}
+
+.vp-doc p {
+  line-height: 1.8;
+  font-size: 1.05rem;
+  margin-bottom: 1.5rem;
+  color: var(--vp-c-text-1);
+}
+
+.vp-doc blockquote {
+  border-left: 4px solid var(--vp-c-brand-1);
+  background: var(--vp-c-bg-soft);
+  padding: 1rem 1.5rem;
+  margin: 2rem 0;
+  border-radius: 0 8px 8px 0;
+}
+
+.vp-doc blockquote p {
+  margin: 0;
+  font-size: 1.05rem;
+  color: var(--vp-c-text-2);
+  font-style: italic;
+}
+
+.vp-doc p code {
+  color: #c0394a;
+  background: rgba(200, 60, 80, 0.05);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
 }

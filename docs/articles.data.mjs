@@ -1,11 +1,7 @@
-// Auto-discovers all article markdown files and extracts frontmatter
+// Auto-discovers all article markdown files from notes/ folder
 import { createContentLoader } from 'vitepress'
 
-export default createContentLoader([
-    'notes/**/*.md',
-    'vue_docs/**/*.md',
-], {
-    // exclude non-article pages (index/header pages)
+export default createContentLoader('notes/**/*.md', {
     includeSrc: false,
     transform(rawData) {
         return rawData

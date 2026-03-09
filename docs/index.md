@@ -3,7 +3,7 @@ layout: home
 pageClass: home-articles
 
 hero:
-  name: "Chark_Dev_Note"
+  name: "Chark筆記"
   tagline: 一個工程師的技術筆記。用來分享開發心得。
   actions:
     - theme: brand
