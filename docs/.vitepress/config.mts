@@ -7,18 +7,28 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: '首頁', link: '/' },
-      { text: '筆記心得', link: '/markdown-examples' },
-      { text: '關於我', link: '/about_me.md' }
+      { text: '筆記心得', link: '/notes/note_Header' },
+      { text: '關於我', link: '/about_me' }
     ],
 
-    sidebar: [
-      {
-        text: '技術筆記',
-        items: [
-          { text: 'CopilotCli使用心得', link: '/ai_docs/copilotCli.md' },
-        ]
-      }
-    ],
+    sidebar: {
+      '/notes/note_Header': [
+        {
+          text: '技術筆記',
+          items: [
+            { text: 'CopilotCli使用心得', link: '/notes/ai_docs/copilotCli.md' },
+          ]
+        },
+      ],
+      '/about_me': [
+        {
+          text: 'About Me',
+          items: [
+            { text: '關於我', link: '/about_me.md' }
+          ]
+        }
+      ]
+    },
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/chuanhui603' }
