@@ -1,10 +1,10 @@
 ---
 layout: home
+pageClass: home-articles
 
 hero:
   name: "Chark_Dev_Note"
-  text: "一個工程師的技術筆記。用來分享開發心得。"
-  tagline: My great project tagline
+  tagline: 一個工程師的技術筆記。用來分享開發心得。
   actions:
     - theme: brand
       text: 筆記心得
@@ -15,4 +15,4 @@ hero:
 
 ---
 
-
+<ArticleCards />
