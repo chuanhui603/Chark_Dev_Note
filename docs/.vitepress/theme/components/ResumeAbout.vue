@@ -4,7 +4,7 @@
       <div class="resume-header">
         <aside class="resume-profile">
           <div class="resume-avatar">
-            <img v-if="fm.avatar" :src="fm.avatar" :alt="`${fm.name} 個人照`" class="resume-avatar-image" />
+            <img v-if="fm.avatar" :src="avatarSrc" :alt="`${fm.name} 個人照`" class="resume-avatar-image" />
             <div v-else class="resume-avatar-placeholder">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
                 stroke-linejoin="round">
@@ -36,7 +36,7 @@
 
         <div class="resume-intro">
           <nav class="resume-breadcrumb">
-            <a href="/">首頁</a>
+            <a :href="withBase('/')">首頁</a>
             <span class="resume-breadcrumb-sep">›</span>
             <span>關於</span>
           </nav>
@@ -102,10 +102,12 @@
 </template>
 
 <script setup>
-import { useData } from 'vitepress'
+import { computed } from 'vue'
+import { useData, withBase } from 'vitepress'
 
 const { frontmatter } = useData()
 const fm = frontmatter
+const avatarSrc = computed(() => (fm.value.avatar ? withBase(fm.value.avatar) : ''))
 
 const icons = {
   location: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>',
