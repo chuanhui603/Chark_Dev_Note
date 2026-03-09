@@ -393,6 +393,13 @@ body {
   color: rgba(36, 52, 71, 0.25);
 }
 
+.resume-avatar-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
 .resume-avatar-placeholder svg {
   width: 100%;
   height: 100%;

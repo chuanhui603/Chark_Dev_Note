@@ -4,7 +4,8 @@
       <div class="resume-header">
         <aside class="resume-profile">
           <div class="resume-avatar">
-            <div class="resume-avatar-placeholder">
+            <img v-if="fm.avatar" :src="fm.avatar" :alt="`${fm.name} 個人照`" class="resume-avatar-image" />
+            <div v-else class="resume-avatar-placeholder">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
                 stroke-linejoin="round">
                 <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />

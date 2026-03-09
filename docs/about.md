@@ -9,6 +9,7 @@ role: C# Backend Engineer / Full-Stack Developer
 location: 高雄市三民區
 email: chuanhui603@gmail.com
 github: https://github.com/chuanhui603
+avatar: /images/%E5%80%8B%E4%BA%BA%E7%85%A7.jpg
 
 introTitle: 
 intro:
