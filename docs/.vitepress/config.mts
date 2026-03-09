@@ -15,8 +15,7 @@ export default defineConfig({
       {
         text: '技術筆記',
         items: [
-          { text: 'AI使用心得', link: '/ai_docs/copilotCli.md' },
-          { text: 'Vue學習筆記', link: '/vue_docs/vue-compositonAPI.md' }
+          { text: 'CopilotCli使用心得', link: '/ai_docs/copilotCli.md' },
         ]
       }
     ],

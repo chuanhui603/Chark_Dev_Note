@@ -1,5 +1,5 @@
 ---
-# https://vitepress.dev/reference/default-theme-home-page
+# http://chark-dev-note.s3-website.ap-east-2.amazonaws.com/
 layout: home
 
 hero:
