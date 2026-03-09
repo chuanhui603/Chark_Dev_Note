@@ -15,9 +15,9 @@ avatar: /images/%E5%80%8B%E4%BA%BA%E7%85%A7.jpg
 
 introTitle: 
 intro:
-  - 工程師資歷約兩年半，
-  - 主要負責企業級管理系統（CRM/ERP/MES）的前後端開發與系統整合。
-  - 熱衷於將抽象的業務需求轉化為高擴展、易維護的系統，期望能持續用技術解決痛點，為團隊帶來穩定且高效的架構方案。
+  - 具備兩年半實戰經驗的 Backend Engineer，專注於企業級系統（CRM/ERP/MES）的前後端開發與跨系統整合。
+  - 擅長將系統模組化與架構翻新，近期更致力於推動團隊工程化轉型，包含建立 Git 管理、導入 AI 輔助開發工作流與 Code Review 標準。
+  - 期望能持續運用技術解決痛點，為團隊帶來高擴展、易維護的穩定架構，並透過系統化開發提升產出效率。
 
 workRoles:
   - 後端開發
@@ -38,7 +38,7 @@ experiences:
   - year: "2023/9 - 2025/3"
     company: 安然科技
     title: 全端工程師
-    highlight: true
+    highlight: false
     details:
       - 負責企業級 CRM 與管理系統的前後端功能開發、需求分析與功能落地
       - 規劃與實作系統整合流程，串接 CRM、ERP、MES 與雲端服務
@@ -54,7 +54,7 @@ experiences:
   - year: "2025/11 - 現今"
     company: 華宏新技股份有限公司
     title: 資訊管理師
-    highlight: false
+    highlight: true
     details:
       - 系統開發： 負責公司內部模組化表單系統專案，進行文件系統化翻新，確保程式碼高度可重用性。
       - 工程化實踐： 推動開發流程轉型，建立 Git 分支管理與重構系統方案，導入並推行 AI 輔助開發工作流，制定 AI 協作規範以優化代碼產出效率，並建立對應的 Code Review 標準。
