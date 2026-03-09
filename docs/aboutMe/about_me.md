@@ -3,56 +3,60 @@ title: 關於我
 description: 履歷與個人介紹頁。
 pageClass: resume-doc
 sidebar: false
+
+name: 趙全輝
+role: C# Backend Engineer / Full-Stack Developer
+location: 高雄市三民區
+email: chuanhui603@gmail.com
+github: https://github.com/chuanhui603
+
+introTitle: 「哈囉，世界！」
+intro:
+  - 我專注在後端開發、系統整合與工程實作，也持續關注前端體驗與 AI 輔助開發流程。
+  - 我喜歡把抽象需求整理成可維護的系統，也習慣透過文件、筆記與實驗紀錄來沉澱知識。目前希望把這個網站經營成個人技術品牌，同時作為作品集與履歷延伸頁面。
+
+workRoles:
+  - 後端開發
+  - 系統整合
+  - API 設計
+  - 全端工程
+  - AI 工作流
+
+experiences:
+  - year: "2021/3 - 2022/3"
+    company: 日月光半導體
+    title: CIM 工程師
+    highlight: false
+    details:
+      - 負責機台自動化系統維護與跨部門軟體專案開發
+  - year: "2023/9 - 2025/3"
+    company: 安然科技
+    title: 全端工程師
+    highlight: true
+    details:
+      - 主導多個大型 CRM 系統開發專案，涵蓋訂單管理與客戶資訊系統
+  - year: "2025/6 - 2025/9"
+    company: 香港商藍鐘
+    title: IT 工程師
+    highlight: false
+    details:
+      - 系統現代化改造與效能優化，提升舊有系統運作效率
+
+projects:
+  - name: 專案名稱 / 系統名稱
+    desc: 一句話說明專案目標與使用者情境。列出技術角色、架構設計或最關鍵的技術挑戰。
+
+skills:
+  - C# / .NET
+  - ASP.NET Core
+  - SQL Server
+  - RESTful API
+  - Vue / Frontend
+  - GitHub Actions
+  - AI Workflow
+  - System Design
 ---
 
-# 你的名字
+# 關於我
 
-*C# Backend Engineer / Full-Stack Developer*
-
-> 我專注在後端開發、系統整合與工程實作，也持續關注前端體驗與 AI 輔助開發流程。這個頁面先作為履歷骨架，之後你可以直接往裡面補工作經歷、專案成果與技術細節。
-
-- 📍 台灣 / 可遠端協作
-- 📧 yourmail@example.com
-- 🔗 GitHub: github.com/chuanhui603
-- 🌐 Blog: Chark_Dev_Note
-
-## 個人簡介
-
-我喜歡把抽象需求整理成可維護的系統，也習慣透過文件、筆記與實驗紀錄來沉澱知識。目前希望把這個網站經營成個人技術品牌，同時作為作品集與履歷延伸頁面。
-
-## 工作經歷
-
-### 職稱名稱
-
-**公司名稱 / 團隊名稱** ｜ 2023 — Present
-
-- 可描述你負責的系統模組、API、平台整合或內部工具。
-- 可加入具體成果，例如效能提升、流程優化、上線專案數量。
-- 若有跨部門合作或帶人經驗，也可以整理在這裡。
-
-### 前一份職稱
-
-**公司名稱 / 部門** ｜ 2021 — 2023
-
-- 可補上系統開發、資料庫設計、維運或重構成果。
-- 如果有使用 .NET、SQL、Vue、React 等技術，可在內容中明確寫出。
-
-## 代表專案
-
-### 專案名稱 / 系統名稱
-
-**專案類型：** 可放商業案、內部平台或個人作品
-
-- 一句話說明專案目標與使用者情境。
-- 列出你的技術角色、架構設計或最關鍵的技術挑戰。
-- 補充可量化成果，例如導入團隊、節省工時或改善效能。
-
-## 技能
-
-`C# / .NET` `ASP.NET Core` `SQL Server` `RESTful API` `Vue / Frontend` `GitHub Actions` `AI Workflow` `System Design`
-
-## 證照 / 學歷
-
-- 學校 / 科系 / 畢業年份
-- 證照名稱 / 取得年份
-- 其他培訓、社群分享或講座經驗
+<ResumeAbout />
