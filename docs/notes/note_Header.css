@@ -1,0 +1,21 @@
+/* 讓內容置中，寬度約 50% */
+.center-container {
+  margin: 0 auto;
+  width: 50%;
+  min-width: 320px;
+  max-width: 700px;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+
+.center-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.left-list {
+  text-align: left;
+  margin-left: 0;
+  padding-left: 0;
+  list-style-position: inside;
+}

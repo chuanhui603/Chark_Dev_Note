@@ -4,15 +4,16 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Chark_Dev_Note",
   description: "一個 C# 工程師的技術筆記。用來分享開發心得。",
+  appearance: false,
   themeConfig: {
     nav: [
       { text: '首頁', link: '/' },
       { text: '筆記心得', link: '/notes/note_Header' },
-      { text: '關於我', link: '/about_me' }
+      { text: '關於我', link: '/aboutMe/about_me' }
     ],
 
     sidebar: {
-      '/notes/note_Header': [
+      '/notes/ai_docs/': [
         {
           text: 'AI心得筆記',
           items: [
@@ -20,11 +21,11 @@ export default defineConfig({
           ]
         },
       ],
-      '/about_me': [
+      '/aboutMe/about_me': [
         {
           text: 'About Me',
           items: [
-            { text: '關於我', link: '/about_me.md' }
+            { text: '關於我', link: '/aboutMe/about_me' }
           ]
         }
       ]
