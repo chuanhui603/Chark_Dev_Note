@@ -75,10 +75,9 @@ projects:
 skills:
   - C# / .NET
   - ASP.NET Core
+  - JavaScript / Jquery
   - SQL Server
-  - RESTful API
-  - Vue / Frontend
-  - GitHub Actions
+  - MySQL
   - AI Workflow
   - System Design
 ---
