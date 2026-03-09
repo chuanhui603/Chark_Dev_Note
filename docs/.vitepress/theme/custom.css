@@ -678,10 +678,12 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
+  align-items: start;
 }
 
 .resume-grid-item {
   padding: clamp(24px, 3vw, 36px);
+  align-self: start;
 }
 
 /* ---- Projects ---- */
